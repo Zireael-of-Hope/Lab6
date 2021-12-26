@@ -9,8 +9,6 @@ namespace ConsoleApp2
 {
     class Program
     {
-        [DllImport("msvcrt")]
-        static extern int _getch();
         static void Main(string[] args)
         {
             bool isPass;
