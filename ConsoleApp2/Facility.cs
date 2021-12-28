@@ -9,9 +9,6 @@ namespace ConsoleApp2
 {
     internal class Facility
     {
-        [DllImport("msvcrt")]
-        static extern int _getch();
-
         Bureau aerodynamics;
 		Bureau powertrain;
 		Bureau chassis;
@@ -87,14 +84,14 @@ namespace ConsoleApp2
                 do
                 {
                     isPass = false;
-                    decision = _getch();
-                    if ((decision >= 49 && decision <= 52) || decision == 58)
+                    decision = Convert.ToInt32(Console.ReadLine());
+                    if ((decision >= 1 && decision <= 4) || decision == 0)
                         isPass = true;
                 } while (isPass == false);
 
                 switch (decision)
                 {
-                    case 49:
+                    case 1:
                         if (aerodynamics.GetLevel() < 4)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
@@ -105,7 +102,7 @@ namespace ConsoleApp2
                         else Console.Write("\nAerodynamics Bureau is already at the top level.");
                         Thread.Sleep(1500);
                         break;
-                    case 50:
+                    case 2:
                         if (powertrain.GetLevel() < 4)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
@@ -116,7 +113,7 @@ namespace ConsoleApp2
                         else Console.Write("\nPowertrain Bureau is already at the top level.");
                         Thread.Sleep(1500);
                         break;
-                    case 51:
+                    case 3:
                         if (chassis.GetLevel() < 4)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
@@ -127,7 +124,7 @@ namespace ConsoleApp2
                         else Console.Write("\nChassis Bureau is already at the top level.");
                         Thread.Sleep(1500);
                         break;
-                    case 52:
+                    case 4:
                         if (durability.GetLevel() < 4)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
@@ -138,7 +135,7 @@ namespace ConsoleApp2
                         else Console.Write("\nDurability Bureau is already at the top level.");
                         Thread.Sleep(1500);
                         break;
-                    case 48:
+                    case 0:
                         isCycled = false;
                         break;
                 }

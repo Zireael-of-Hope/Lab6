@@ -9,9 +9,6 @@ namespace ConsoleApp2
 {
 	internal class Vehicle
 	{
-		[DllImport("msvcrt")]
-		static extern int _getch();
-
 		int sponsorStickerQuantity;
 
 		Driver driver;
@@ -423,8 +420,8 @@ namespace ConsoleApp2
 				do
 				{
 					isPass = false;
-					decision = _getch();
-					if ((decision >= 49 && decision <= 51) || decision == 58)
+					decision = Convert.ToInt32(Console.ReadLine());
+					if ((decision >= 1 && decision <= 3) || decision == 0)
 						isPass = true;
 				} while (isPass == false);
 
@@ -481,15 +478,15 @@ namespace ConsoleApp2
 				do
 				{
 					isPass = false;
-					decision = _getch();
-					if ((decision >= 49 && decision <= 56) || decision == 58)
+					decision = Convert.ToInt32(Console.ReadLine());
+					if ((decision >= 1 && decision <= 8) || decision == 0)
 						isPass = true;
 				} while (isPass == false);
 				Console.Clear();
 
 				switch (decision)
 				{
-					case 49:
+					case 1:
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.WriteLine("Internal Combastion Engine:");
 						Console.ResetColor();
@@ -511,31 +508,31 @@ namespace ConsoleApp2
 						do
 						{
 							isPass = false;
-							decision = _getch();
-							if ((decision >= 49 && decision <= 52) || decision == 58)
+							decision = Convert.ToInt32(Console.ReadLine());
+							if ((decision >= 1 && decision <= 4) || decision == 0)
 								isPass = true;
 						} while (isPass == false);
 
 						if (decision != 0)
 							switch (decision)
 							{
-								case 49:
+								case 1:
 									seasonComponents.powerUnitSet.internalCombastionEngine = InstalledComponent.COMPONENT_1;
 									break;
-								case 50:
+								case 2:
 									seasonComponents.powerUnitSet.internalCombastionEngine = InstalledComponent.COMPONENT_2;
 									break;
-								case 51:
+								case 3:
 									seasonComponents.powerUnitSet.internalCombastionEngine = InstalledComponent.COMPONENT_3;
 									break;
-								case 52:
+								case 4:
 									seasonComponents.powerUnitSet.internalCombastionEngine = InstalledComponent.NOT_FITTED;
 									break;
-								case 58:
+								case 0:
 									break;
 							}
 						break;
-					case 50:
+					case 2:
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.WriteLine("MGU Kinetic:");
 						Console.ResetColor();
@@ -558,31 +555,31 @@ namespace ConsoleApp2
 						do
 						{
 							isPass = false;
-							decision = _getch();
-							if ((decision >= 49 && decision <= 52) || decision == 58)
+							decision = Convert.ToInt32(Console.ReadLine());
+							if ((decision >= 1 && decision <= 4) || decision == 0)
 								isPass = true;
 						} while (isPass == false);
 
 						if (decision != 0)
 							switch (decision)
 							{
-								case 49:
+								case 1:
 									seasonComponents.powerUnitSet.mguKinetic = InstalledComponent.COMPONENT_1;
 									break;
-								case 50:
+								case 2:
 									seasonComponents.powerUnitSet.mguKinetic = InstalledComponent.COMPONENT_2;
 									break;
-								case 51:
+								case 3:
 									seasonComponents.powerUnitSet.mguKinetic = InstalledComponent.COMPONENT_3;
 									break;
-								case 52:
+								case 4:
 									seasonComponents.powerUnitSet.mguKinetic = InstalledComponent.NOT_FITTED;
 									break;
-								case 58:
+								case 0:
 									break;
 							}
 						break;
-					case 51:
+					case 3:
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.WriteLine("MGU Heat:");
 						Console.ResetColor();
@@ -604,31 +601,31 @@ namespace ConsoleApp2
 						do
 						{
 							isPass = false;
-							decision = _getch();
-							if ((decision >= 49 && decision <= 52) || decision == 58)
+							decision = Convert.ToInt32(Console.ReadLine());
+							if ((decision >= 1 && decision <= 4) || decision == 0)
 								isPass = true;
 						} while (isPass == false);
 
 						if (decision != 0)
 							switch (decision)
 							{
-								case 49:
+								case 1:
 									seasonComponents.powerUnitSet.mguHeat = InstalledComponent.COMPONENT_1;
 									break;
-								case 50:
+								case 2:
 									seasonComponents.powerUnitSet.mguHeat = InstalledComponent.COMPONENT_2;
 									break;
-								case 51:
+								case 3:
 									seasonComponents.powerUnitSet.mguHeat = InstalledComponent.COMPONENT_3;
 									break;
-								case 52:
+								case 4:
 									seasonComponents.powerUnitSet.mguHeat = InstalledComponent.NOT_FITTED;
 									break;
-								case 58:
+								case 0:
 									break;
 							}
 						break;
-					case 52:
+					case 4:
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.WriteLine("Turbo Charger:");
 						Console.ResetColor();
@@ -650,31 +647,31 @@ namespace ConsoleApp2
 						do
 						{
 							isPass = false;
-							decision = _getch();
-							if ((decision >= 49 && decision <= 52) || decision == 58)
+							decision = Convert.ToInt32(Console.ReadLine());
+							if ((decision >= 1 && decision <= 4) || decision == 0)
 								isPass = true;
 						} while (isPass == false);
 
 						if (decision != 0)
 							switch (decision)
 							{
-								case 49:
+								case 1:
 									seasonComponents.powerUnitSet.turboCharger = InstalledComponent.COMPONENT_1;
 									break;
-								case 50:
+								case 2:
 									seasonComponents.powerUnitSet.turboCharger = InstalledComponent.COMPONENT_2;
 									break;
-								case 51:
+								case 3:
 									seasonComponents.powerUnitSet.turboCharger = InstalledComponent.COMPONENT_3;
 									break;
-								case 52:
+								case 4:
 									seasonComponents.powerUnitSet.turboCharger = InstalledComponent.NOT_FITTED;
 									break;
-								case 58:
+								case 0:
 									break;
 							}
 						break;
-					case 53:
+					case 5:
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.WriteLine("Energy Store:");
 						Console.ResetColor();
@@ -692,28 +689,28 @@ namespace ConsoleApp2
 						do
 						{
 							isPass = false;
-							decision = _getch();
-							if ((decision >= 49 && decision <= 51) || decision == 58)
+							decision = Convert.ToInt32(Console.ReadLine());
+							if ((decision >= 1 && decision <= 3) || decision == 0)
 								isPass = true;
 						} while (isPass == false);
 
 						if (decision != 0)
 							switch (decision)
 							{
-								case 49:
+								case 1:
 									seasonComponents.powerUnitSet.energyStore = InstalledComponent.COMPONENT_1;
 									break;
-								case 50:
+								case 2:
 									seasonComponents.powerUnitSet.energyStore = InstalledComponent.COMPONENT_2;
 									break;
-								case 51:
+								case 3:
 									seasonComponents.powerUnitSet.energyStore = InstalledComponent.NOT_FITTED;
 									break;
-								case 58:
+								case 0:
 									break;
 							}
 						break;
-					case 54:
+					case 6:
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.WriteLine("Control Electronics:");
 						Console.ResetColor();
@@ -731,28 +728,28 @@ namespace ConsoleApp2
 						do
 						{
 							isPass = false;
-							decision = _getch();
-							if ((decision >= 49 && decision <= 51) || decision == 58)
+							decision = Convert.ToInt32(Console.ReadLine());
+							if ((decision >= 1 && decision <= 3) || decision == 0)
 								isPass = true;
 						} while (isPass == false);
 
 						if (decision != 0)
 							switch (decision)
 							{
-								case 49:
+								case 1:
 									seasonComponents.powerUnitSet.controlElectronics = InstalledComponent.COMPONENT_1;
 									break;
-								case 50:
+								case 2:
 									seasonComponents.powerUnitSet.controlElectronics = InstalledComponent.COMPONENT_2;
 									break;
-								case 51:
+								case 3:
 									seasonComponents.powerUnitSet.controlElectronics = InstalledComponent.NOT_FITTED;
 									break;
-								case 58:
+								case 0:
 									break;
 							}
 						break;
-					case 55:
+					case 7:
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.WriteLine("Practise Gearbox:");
 						Console.ResetColor();
@@ -770,28 +767,28 @@ namespace ConsoleApp2
 						do
 						{
 							isPass = false;
-							decision = _getch();
-							if ((decision >= 49 && decision <= 51)  || decision == 58)
+							decision = Convert.ToInt32(Console.ReadLine());
+							if ((decision >= 1 && decision <= 3)  || decision == 0)
 								isPass = true;
 						} while (isPass == false);
 
 						if (decision != 0)
 							switch (decision)
 							{
-								case 49:
+								case 1:
 									seasonComponents.gearboxSet.practiceGearbox = InstalledComponent.COMPONENT_1;
 									break;
-								case 50:
+								case 2:
 									seasonComponents.gearboxSet.practiceGearbox = InstalledComponent.COMPONENT_2;
 									break;
-								case 51:
+								case 3:
 									seasonComponents.gearboxSet.practiceGearbox = InstalledComponent.NOT_FITTED;
 									break;
-								case 58:
+								case 0:
 									break;
 							}
 						break;
-					case 56:
+					case 8:
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.WriteLine("Event Gearbox:");
 						Console.ResetColor();
@@ -809,28 +806,28 @@ namespace ConsoleApp2
 						do
 						{
 							isPass = false;
-							decision = _getch();
-							if ((decision >= 49 && decision <= 51) || decision == 58)
+							decision = Convert.ToInt32(Console.ReadLine());
+							if ((decision >= 1 && decision <= 3) || decision == 0)
 								isPass = true;
 						} while (isPass == false);
 
 						if (decision != 0)
 							switch (decision)
 							{
-								case 49:
+								case 1:
 									seasonComponents.gearboxSet.eventGearbox = InstalledComponent.COMPONENT_1;
 									break;
-								case 50:
+								case 2:
 									seasonComponents.gearboxSet.eventGearbox = InstalledComponent.COMPONENT_2;
 									break;
-								case 51:
+								case 3:
 									seasonComponents.gearboxSet.eventGearbox = InstalledComponent.NOT_FITTED;
 									break;
-								case 58:
+								case 0:
 									break;
 							}
 						break;
-					case 58:
+					case 0:
 						isCycled = false;
 						break;
 				}

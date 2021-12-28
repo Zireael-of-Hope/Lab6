@@ -97,7 +97,7 @@ namespace ConsoleApp2
 			{
 				isPass = false;
 				decision = Convert.ToInt32(Console.ReadLine());
-				if (decision >= 1 && decision <= 4)
+				if (decision >= 1 && decision <= 5)
 					isPass = true;
 			} while (isPass == false);
 

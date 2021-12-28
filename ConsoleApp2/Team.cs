@@ -164,6 +164,7 @@ namespace ConsoleApp2
 				}
 			} while (isCycled);
 		}
+
 		public void SubChangeDriver(int whichDriver)
 		{
 			String tempString;
@@ -250,6 +251,7 @@ namespace ConsoleApp2
 				}
 			} while (isCycled == true);
 		}
+
 		public void SubChangeVehicle(int carNumber)
 		{
 			int decision;
@@ -448,6 +450,7 @@ namespace ConsoleApp2
 				}
 			} while (isCycled);
 		}
+
 		public void SubchangeSposnor(int whichSponsor)
 		{
 			int decision;
@@ -458,7 +461,6 @@ namespace ConsoleApp2
 			Console.Clear();
 
 			Console.Write("Enter name of the main sponsor: ");
-			Console.ReadLine();
 			tempString = Console.ReadLine();
 			if (whichSponsor == 1) mainSponsor.SetName(tempString);
 			else secondarySponsor.SetName(tempString);
